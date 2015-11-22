@@ -2,8 +2,6 @@ import sqlite3
 from flask import Flask, request, redirect, render_template, g, jsonify, flash, url_for
 from contextlib import closing
 import datetime
-from application import db
-from application.models import Colors
 from instagram import uploadPhoto
 
 # configuration

@@ -1,0 +1,260 @@
+{% extends "layout.html" %}
+{% block body %}
+<div>
+	<div class="title-text">ColorJam - Color your mood</div>
+	<form action="/add" method="post" class="form">
+		<div class="fields">
+			<div id="uid-input">
+				<label class="uid-title">User id</label>
+				</br>
+				<input class="uid-box" name="uid" value="0">
+				</br>
+				<input class="color-text" name="color" value="rgb(0, 0, 0)" style="opacity:0;">
+				<input class="valence-val" name="valence" style="opacity:0;">
+				</br></br></br>
+				<input class="btn primary button" type="submit" value="Submit">
+				<div class="logo">
+					<img src="{{ url_for('static', filename='colla_trans.png')}}" alt="Smiley face" height="300" width="300" style="background-color: rgb(255, 255, 255);">
+					<div class="uid-title">&copy;/giphy compassion</div>
+				</div>
+			</div>
+			<div id="sliders">
+				<label class="uid-title">100</label>
+				<div id="slider-vertical"></div>
+				<label class="uid-title" style="margin-top: 10px; margin-left:-10px;">-100</label>
+			</div>
+		</div>
+		<div class="colors">
+			<div class="color-group">
+				<div><div class="unsel" style="background-color: rgb(0, 0, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 0, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 0, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 0, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 0, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 0, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 51, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 51, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 51, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 51, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 51, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 51, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 102, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 102, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 102, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 102, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 102, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 102, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 153, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 153, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 153, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 153, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 153, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 153, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 204, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 204, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 204, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 204, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 204, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 204, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 255, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 255, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 255, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 255, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 255, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(0, 255, 255);"></div></div>
+			</div>
+			<div class="color-group">
+				<div><div class="unsel" style="background-color: rgb(51, 0, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 0, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 0, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 0, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 0, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 0, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 51, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 51, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 51, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 51, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 51, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 51, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 102, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 102, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 102, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 102, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 102, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 102, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 153, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 153, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 153, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 153, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 153, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 153, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 204, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 204, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 204, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 204, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 204, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 204, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 255, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 255, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 255, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 255, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 255, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(51, 255, 255);"></div></div>
+			</div>
+			<div class="color-group">
+				<div><div class="unsel" style="background-color: rgb(102, 0, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 0, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 0, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 0, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 0, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 0, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 51, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 51, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 51, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 51, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 51, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 51, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 102, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 102, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 102, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 102, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 102, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 102, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 153, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 153, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 153, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 153, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 153, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 153, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 204, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 204, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 204, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 204, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 204, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 204, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 255, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 255, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 255, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 255, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 255, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(102, 255, 255);"></div></div>
+				</div>
+			<div class="color-group">
+				<div><div class="unsel" style="background-color: rgb(153, 0, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 0, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 0, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 0, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 0, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 0, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 51, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 51, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 51, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 51, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 51, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 51, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 102, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 102, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 102, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 102, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 102, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 102, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 153, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 153, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 153, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 153, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 153, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 153, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 204, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 204, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 204, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 204, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 204, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 204, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 255, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 255, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 255, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 255, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 255, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(153, 255, 255);"></div></div>
+			</div>
+			<div class="color-group">
+				<div><div class="unsel" style="background-color: rgb(204, 0, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 0, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 0, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 0, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 0, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 0, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 51, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 51, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 51, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 51, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 51, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 51, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 102, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 102, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 102, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 102, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 102, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 102, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 153, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 153, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 153, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 153, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 153, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 153, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 204, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 204, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 204, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 204, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 204, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 204, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 255, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 255, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 255, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 255, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 255, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(204, 255, 255);"></div></div>
+			</div>
+			<div class="color-group">
+				<div><div class="unsel" style="background-color: rgb(255, 0, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 0, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 0, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 0, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 0, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 0, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 51, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 51, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 51, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 51, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 51, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 51, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 102, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 102, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 102, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 102, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 102, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 102, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 153, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 153, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 153, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 153, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 153, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 153, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 204, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 204, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 204, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 204, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 204, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 204, 255);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 255, 0);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 255, 51);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 255, 102);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 255, 153);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 255, 204);"></div></div>
+				<div><div class="unsel" style="background-color: rgb(255, 255, 255);"></div></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+{% endblock %}
